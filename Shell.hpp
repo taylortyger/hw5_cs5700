@@ -40,8 +40,10 @@ void Shell::run() {
         if(cmd != "")
         {
             Command command = getCommandFactory().newCommand(cmd, *this);
-            command.execute();
-            childPtime += command.getChildPtime();
+            if(command != NULL){
+                command.execute();
+                childPtime += command.getChildPtime();
+            }
         }
         
     }
