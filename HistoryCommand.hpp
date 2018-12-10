@@ -7,9 +7,7 @@ class HistoryCommand : public Command {
         void execute();
 }
 
-HistoryCommand::HistoryCommand(std::string cmd, Shell& shell) : Command(cmd, shell){
-    historyBuffer = historyBuffer;
-}
+HistoryCommand::HistoryCommand(std::string cmd, Shell& shell) : Command(cmd, shell){}
 
 void HistoryCommand::execute() {
     

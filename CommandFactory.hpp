@@ -25,8 +25,8 @@ Command CommandFactory::newCommand(std::string cmd, Shell& shell) {
         if(indx > historyBuffer.size()) {
             //Probably be better to make a MessageCommand that takes in a message string,
             // from which execute() simply prints out the message. 
-            std::cout << "You have not used " << indx << " command(s) yet.\n";
-            return NULL;
+            std::string msg = "You have not used " + indx + " command(s) yet.\n";
+            return MessageCommand(cmd, shell, msg);
             
         } else {
             std::string cmdToExecute = historyBuffer[(int)indx-1];
