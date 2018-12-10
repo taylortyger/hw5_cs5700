@@ -4,17 +4,15 @@
 class CdCommand : public Command {
         
     public:
-        CdCommand(std::string cmd);
+        CdCommand(std::string cmd, Shell& shell);
         void execute();
 }
 
-CdCommand::CdCommand(std::string cmd) : Command(cmd){
-    historyBuffer = historyBuffer;
-}
+CdCommand::CdCommand(std::string cmd, Shell& shell) : Command(cmd, shell){}
 
 void CdCommand::execute() {
     // Tokenize command string
-    std::vector<std::string> tokens = Command::tokenizeStr(commandString, ' ');
+    std::vector<std::string> tokens = Command::tokenizeStr(cmd, ' ');
     
     if(tokens.size() < 2) std::cout << "No arguments supplied. 'cd' requires a path to a directory.\n";
     else

@@ -4,15 +4,15 @@
 class PipeCommand : public Command {
         
     public:
-        PipeCommand(std::string cmd);
+        PipeCommand(std::string cmd, Shell& shell);
         void execute();
 }
 
-PipeCommand::PipeCommand(std::string cmd) : Command(cmd){}
+PipeCommand::PipeCommand(std::string cmd, Shell& shell) : Command(cmd, shell){}
 
 void PipeCommand::execute() {
     //generate vector of command strings in pipeline delimited by '|'
-    std::vector<std::string> commands = tokenizeStr(commandString, '|');
+    std::vector<std::string> commands = tokenizeStr(cmd, '|');
     
     //generate a token vector for each command string
     std::vector<std::vector<std::string>> tkns;

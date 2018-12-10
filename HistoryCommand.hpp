@@ -2,19 +2,19 @@
 #define _SHELL_HISTORY_COMMAND_HPP_
 
 class HistoryCommand : public Command {
-    private:
-        std::vector<std::string>& historyBuffer;
-        
     public:
-        HistoryCommand(std::string cmd, std::vector<std::string>& historyBuffer);
+        HistoryCommand(std::string cmd, Shell& shell);
         void execute();
 }
 
-HistoryCommand::HistoryCommand(std::string cmd, std::vector<std::string>& historyBuffer) : Command(cmd){
+HistoryCommand::HistoryCommand(std::string cmd, Shell& shell) : Command(cmd, shell){
     historyBuffer = historyBuffer;
 }
 
 void HistoryCommand::execute() {
+    
+    std::vector<std::string> historyBuffer = shell.getCommandFactory().getHistoryBuffer();
+    
     std::cout << "---  Command History  --- \n";
     for(unsigned i = 0; i < historyBuffer.size(); i++)
         std::cout << i+1 << " : " << historyBuffer[i] << std::endl;
