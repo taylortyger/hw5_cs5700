@@ -26,6 +26,8 @@ void Shell::run() {
                 command->execute();
                 childPtime += command->getChildPtime();
             }
+            
+            delete command;
         }
         
     }

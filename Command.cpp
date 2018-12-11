@@ -15,7 +15,9 @@ std::vector<std::string> Command::tokenizeStr(std::string str, char delimiter) {
     std::vector<std::string> tokens;
     std::istringstream ss(str);
     std::string token;
-    while(std::getline(ss, token, delimiter)) tokens.push_back(token);   
+    while(std::getline(ss, token, delimiter)){
+        if(token != "") tokens.push_back(token);  
+    } 
     return tokens;
 }
 
