@@ -36,3 +36,8 @@ CommandFactory.
 All this was done in an effort to make the code more modular, extensible, and 
 maintainable. 
 
+MAIN FEATURE ADDED:
+Support for piped system commands was added. For example a user can now enter a
+command string such as: "ls -l | more". Where as before piping was not supported
+in any way. Support has not yet been added for piping built-in commands. 
+
