@@ -21,6 +21,9 @@ std::vector<std::string> Command::tokenizeStr(std::string str, char delimiter) {
     return tokens;
 }
 
+std::string Command::getCmd() {
+    return cmd;
+}
 //-------------------------------------------------------------------
 //
 //  Generate new character pointer array of arguments (tokens) from

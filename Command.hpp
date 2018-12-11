@@ -21,6 +21,7 @@ class Command {
     public:
         Command(std::string cmd, Shell& shell);
         std::chrono::duration<double> getChildPtime();
+        std::string getCmd();
         
         static std::vector<std::string> tokenizeStr(std::string str, char delimiter);
         static char** getArgs(std::vector<std::string> tokens);

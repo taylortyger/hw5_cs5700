@@ -7,10 +7,12 @@
 #include <ctime>
 #include <iomanip>
 #include "Shell.hpp"
+#include "Test.hpp"
 
 int main(void) 
 {
     Shell shell = Shell();
     shell.run();
+    //Test::runTests();
     return 0;
 }

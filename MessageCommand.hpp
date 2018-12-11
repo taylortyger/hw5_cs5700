@@ -8,6 +8,7 @@ class MessageCommand : public Command {
         std::string message;
     public:
         MessageCommand(std::string cmd, Shell& shell, std::string message);
+        std::string getMessage();
         void execute();
 };
 

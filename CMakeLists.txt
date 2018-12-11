@@ -27,4 +27,6 @@ add_executable(cppShellHW5
 	SystemCommand.cpp
 	CommandFactory.hpp
 	CommandFactory.cpp
+	Test.hpp
+	Test.cpp
 )

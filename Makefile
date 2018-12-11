@@ -262,6 +262,21 @@ SystemCommand.s:
 .PHONY : SystemCommand.s
 
 # target to build an object file
+Test.o:
+	$(MAKE) -f CMakeFiles/cppShellHW5.dir/build.make CMakeFiles/cppShellHW5.dir/Test.o
+.PHONY : Test.o
+
+# target to preprocess a source file
+Test.i:
+	$(MAKE) -f CMakeFiles/cppShellHW5.dir/build.make CMakeFiles/cppShellHW5.dir/Test.i
+.PHONY : Test.i
+
+# target to generate assembly for a file
+Test.s:
+	$(MAKE) -f CMakeFiles/cppShellHW5.dir/build.make CMakeFiles/cppShellHW5.dir/Test.s
+.PHONY : Test.s
+
+# target to build an object file
 main.o:
 	$(MAKE) -f CMakeFiles/cppShellHW5.dir/build.make CMakeFiles/cppShellHW5.dir/main.o
 .PHONY : main.o
@@ -315,6 +330,9 @@ help:
 	@echo "... SystemCommand.o"
 	@echo "... SystemCommand.i"
 	@echo "... SystemCommand.s"
+	@echo "... Test.o"
+	@echo "... Test.i"
+	@echo "... Test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

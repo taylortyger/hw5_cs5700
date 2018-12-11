@@ -7,3 +7,7 @@ MessageCommand::MessageCommand(std::string cmd, Shell& shell, std::string messag
 void MessageCommand::execute() {
     std::cout << this->message << std::endl;
 }
+
+std::string MessageCommand::getMessage() {
+    return message;
+}
