@@ -6,6 +6,7 @@
 #include <chrono>
 #include <ctime>
 #include <iomanip>
+#include "Shell.hpp"
 
 int main(void) 
 {
